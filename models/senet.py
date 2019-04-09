@@ -279,7 +279,7 @@ class SENet(nn.Module):
         # To preserve compatibility with Caffe weights `ceil_mode=True`
         # is used instead of `padding=1`.
         layer0_modules.append(('pool', nn.MaxPool2d(3, stride=2,
-                                                    ceil_mode=True)))
+                                                    ceil_mode=False)))
         self.layer0 = nn.Sequential(OrderedDict(layer0_modules))
         self.layer1 = self._make_layer(
             block,
