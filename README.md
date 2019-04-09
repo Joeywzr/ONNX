@@ -14,9 +14,13 @@ ONNX is a open format to represent deep learning models. With ONNX, AI developer
 
 ### How to use
 
-**--type/-t**: input 'caffe2' or 'tensorflow' or 'pytorch'
+**--type/-t:** input 'caffe2' or 'tensorflow' or 'pytorch'
 
-**--net/-n:** support
+**--net/-n:** 
+
+* Tensorflow:
+* Caffe2:
+* Pytorch: Support:'vgg16', 'vgg19','inceptionv3', 'inceptionv4', 'resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152', 'densenet121', 'densenet161', 'densenet169', 'densenet201', 'inceptionresnetv2' TODO: 'mobilenet_v1', 'mobilenet_v2', 'se_resnet50', 'bninception' 
 
 **--download/-d:** download the models or not
 

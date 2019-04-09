@@ -21,14 +21,14 @@ def parse_args():
                             'vgg16', 'vgg19', 'resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152',
                             'densenet121', 'densenet161', 'densenet169', 'densenet201',
                             'inceptionv3', 'inceptionv4', 'inceptionresnetv2',
-                            'se_resnet50', 'bninception', 'mobilenetv1', 'mobilenetv2'
+                            'se_resnet50', 'bninception', 'mobilenet_v1', 'mobilenet_v2'
                         ],
                         help='input model name(default: resnet50)')
     parser.add_argument('--download', '-d', type=bool,
                         default=False, help='download the model(default: False)')
-    parser.add_argumen('--d_path', '-dp', type=str, default='', help='download path(default:current path)')
+    parser.add_argument('--d_path', '-dp', type=str, default='', help='download path(default:current path)')
     parser.add_argument('--convert2onnx', '-c2o', type=bool, default=False, help='convert to onnx')
-    parser.add_argument('--output', '-o', type=str, default='v ', help='output path')
+    parser.add_argument('--output', '-o', type=str, default='', help='output path')
     args = parser.parse_args()
     return args
 
@@ -188,9 +188,28 @@ if __name__ == "__main__":
             'mean': [104, 117, 128],
             'std': [1, 1, 1],
             'num_classes': 1000
+        },
+        'mobilenet_v1': {
+            # 'url': '',
+            # 'input_space': 'BGR',
+            # 'input_size': [3, 224, 224],
+            # 'input_range': [0, 255],
+            # 'mean': [104, 117, 128],
+            # 'std': [1, 1, 1],
+            # 'num_classes': 1000
+        },
+        'mobilenet_v2': {
+            # 'url': '',
+            # 'input_space': 'BGR',
+            # 'input_size': [3, 224, 224],
+            # 'input_range': [0, 255],
+            # 'mean': [104, 117, 128],
+            # 'std': [1, 1, 1],
+            # 'num_classes': 1000
         }
     }
     args = parse_args()
+
     # print the info of model
     print(pretrained_settings[args.net])
 
