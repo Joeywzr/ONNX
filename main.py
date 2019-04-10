@@ -21,7 +21,7 @@ def parse_args():
                             'vgg16', 'vgg19', 'resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152',
                             'densenet121', 'densenet161', 'densenet169', 'densenet201',
                             'inceptionv3', 'inceptionv4', 'inceptionresnetv2',
-                            'se_resnet50', 'bninception', 'mobilenet_v1', 'mobilenet_v2'
+                            'se_resnet50', 'bninception', 'mobilenetv1', 'mobilenetv2'
                         ],
                         help='input model name(default: resnet50)')
     parser.add_argument('--download', '-d', type=bool,
@@ -148,8 +148,8 @@ if __name__ == "__main__":
             'input_space': 'RGB',
             'input_size': [3, 299, 299],
             'input_range': [0, 1],
-            'mean': [0.5, 0.5, 0.5],
-            'std': [0.5, 0.5, 0.5],
+            'mean': [0.485, 0.456, 0.406],
+            'std': [0.229, 0.224, 0.225],
             'num_classes': 1000
         },
         'inceptionv4': {
@@ -157,8 +157,8 @@ if __name__ == "__main__":
             'input_space': 'RGB',
             'input_size': [3, 299, 299],
             'input_range': [0, 1],
-            'mean': [0.5, 0.5, 0.5],
-            'std': [0.5, 0.5, 0.5],
+            'mean': [0.485, 0.456, 0.406],
+            'std': [0.229, 0.224, 0.225],
             'num_classes': 1000
         },
         'inceptionresnetv2': {
@@ -166,8 +166,8 @@ if __name__ == "__main__":
             'input_space': 'RGB',
             'input_size': [3, 299, 299],
             'input_range': [0, 1],
-            'mean': [0.5, 0.5, 0.5],
-            'std': [0.5, 0.5, 0.5],
+            'mean': [0.485, 0.456, 0.406],
+            'std': [0.229, 0.224, 0.225],
             'num_classes': 1000
         },
         'se_resnet50': {
@@ -183,29 +183,29 @@ if __name__ == "__main__":
             'url': 'http://data.lip6.fr/cadene/pretrainedmodels/bn_inception-52deb4733.pth',
             # 'url': 'http://yjxiong.me/others/bn_inception-9f5701afb96c8044.pth',
             'input_space': 'BGR',
-            'input_size': [3, 224, 224],
-            'input_range': [0, 255],
-            'mean': [104, 117, 128],
-            'std': [1, 1, 1],
+            'input_size': [3, 299, 299],
+            'input_range': [0, 1],
+            'mean': [0.485, 0.456, 0.406],
+            'std': [0.229, 0.224, 0.225],
             'num_classes': 1000
         },
-        'mobilenet_v1': {
-            # 'url': '',
-            # 'input_space': 'BGR',
-            # 'input_size': [3, 224, 224],
-            # 'input_range': [0, 255],
-            # 'mean': [104, 117, 128],
-            # 'std': [1, 1, 1],
-            # 'num_classes': 1000
+        'mobilenetv1': {
+            'url': '',
+            'input_space': 'BGR',
+            'input_size': [3, 299, 299],
+            'input_range': [0, 1],
+            'mean': [0.485, 0.456, 0.406],
+            'std': [0.229, 0.224, 0.225],
+            'num_classes': 1000
         },
-        'mobilenet_v2': {
-            # 'url': '',
-            # 'input_space': 'BGR',
-            # 'input_size': [3, 224, 224],
-            # 'input_range': [0, 255],
-            # 'mean': [104, 117, 128],
-            # 'std': [1, 1, 1],
-            # 'num_classes': 1000
+        'mobilenetv2': {
+            'url': '',
+            'input_space': 'BGR',
+            'input_size': [3, 299, 299],
+            'input_range': [0, 1],
+            'mean': [0.485, 0.456, 0.406],
+            'std': [0.229, 0.224, 0.225],
+            'num_classes': 1000
         }
     }
     args = parse_args()
