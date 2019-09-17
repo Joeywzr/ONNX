@@ -13,11 +13,11 @@ pretrained_settings = {
             # Was ported using python2 (may trigger warning)
             'url': 'http://data.lip6.fr/cadene/pretrainedmodels/bn_inception-52deb4733.pth',
             # 'url': 'http://yjxiong.me/others/bn_inception-9f5701afb96c8044.pth',
-            'input_space': 'RGB',
+            'input_space': 'BGR',
             'input_size': [3, 224, 224],
-            'input_range': [0, 255],
-            'mean': [104, 117, 128],
-            'std': [1, 1, 1],
+            'input_range': [0, 1],
+            'mean': [0.485, 0.456, 0.406],
+            'std': [0.229, 0.224, 0.225],
             'num_classes': 1000
         }
     }
