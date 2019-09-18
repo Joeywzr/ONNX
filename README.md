@@ -41,13 +41,13 @@ python main.py -t pytorch -n resnet18
 * To download pretrained models:
 
 ~~~shell
-python main.py -t pytorch -n resnet18 -d True
+python main.py -t pytorch -n resnet18 -d
 ~~~
 
 * To convert pretrained models to onnx models:
 
 ~~~shell
-python main.py -t pytorch -n resnet18 -c2o True
+python main.py -t pytorch -n resnet18 -c2o
 ~~~
 
 ### Evaluation on imagenet

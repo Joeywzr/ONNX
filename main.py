@@ -17,7 +17,7 @@ def parse_args():
                             'se_resnet50', 'bninception', 'mobilenetv1', 'mobilenetv2'
                         ],
                         help='input model name(default: resnet50)')
-    parser.add_argument('--download', '-d', type=bool,
+    parser.add_argument('--download', '-d', action='store_true',
                         default=False, help='download the model(default: False)')
     parser.add_argument('--d_path', '-dp', type=str, default='', help='download path(default:current path)')
     parser.add_argument('--convert2onnx', '-c2o', action='store_true', default=False, help='convert to onnx(default:False)')
