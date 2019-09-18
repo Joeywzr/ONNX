@@ -50,11 +50,12 @@ class PytorchConnector:
         elif self.net == 'mobilenetv2' :
             x = Variable(torch.randn(1, 3, 224, 224))
             model = mobilenetv2()
-            model.load_state_dict(torch.load('pretrained/mobilenetv2-0c6065bc.pth'))
+            model.load_state_dict(torch.load('pretrained/mobilenetv2-0c6065bc.pth', map_location=torch.device('cpu')))
         elif self.net == 'mobilenetv1':
-            x = Variable(torch.randn(1, 3, 224, 224))
-            model = mobilenetv1()
-            model.load_state_dict(torch.load('pretrained/mobilenetv2-0c6065bc.pth'))
+            print('not available yet')
+            # x = Variable(torch.randn(1, 3, 224, 224))
+            # model = mobilenetv1()
+            # model.load_state_dict(torch.load('pretrained/mobilenetv2-0c6065bc.pth'))
         else:
             x = Variable(torch.randn(1, 3, 224, 224))
             model = globals().get(self.net)(pretrained=True)
